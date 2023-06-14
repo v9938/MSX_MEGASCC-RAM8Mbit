@@ -166,7 +166,7 @@ Bit 7 = LED
 回路図、および基板のガーバデータを同梱しています。  
   
 ### ●基板
-  <img src="./PCB/TOP.png" width=320 >　<img src="./PCB/BOTTOM.png" width=320 >  
+  <img src="./PCB/top.png" width=320 >　<img src="./PCB/bottom.png" width=320 >  
 
 ### ●回路図
 
