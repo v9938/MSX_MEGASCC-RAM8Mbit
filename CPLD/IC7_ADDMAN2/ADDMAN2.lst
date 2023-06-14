@@ -1,0 +1,53 @@
+LISTING FOR LOGIC DESCRIPTION FILE: ADDMAN2.pld                      Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Thu Mar 16 17:17:04 2023
+
+  1:Name     ADDMAN2 ;
+  2:PartNo   00 ;
+  3:Date     2022/11/22 ;
+  4:Revision 01 ;
+  5:Designer v9938 ;
+  6:Company  None ;
+  7:Assembly None ;
+  8:Location  ;
+  9:Device   G16V8 ;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN 1   = CASSETTE_EN                      ; /*                                 */ 
+ 13:PIN 2   = UPPER_EN ; /*                                 */ 
+ 14:PIN 3   = LS273_BIT4               ; /*                                 */ 
+ 15:PIN 4   = LS273_BIT6              ; /*                                 */ 
+ 16:PIN 5   = A7                      ; /*                                 */ 
+ 17:PIN 6   = A10                      ; /*                                 */ 
+ 18:PIN 7   = A9                      ; /*                                 */ 
+ 19:PIN 8   = WE             ; /*   */
+ 20:PIN 9   = SLTSEL ; /*                                                   */ 
+ 21:PIN 11  = DEFBANK                  ; /*                                 */ 
+ 22:
+ 23:/* *************** OUTPUT PINS *********************/
+ 24:PIN 13  = MA19               ; /*                                 */ 
+ 25:PIN 14  = SRAM_WE                ; /*                                 */ 
+ 26:PIN 16  = SCC_SLTSEL              ; /*                                 */ 
+ 27:PIN 17  = SCC_WE                  ; /*                                 */ 
+ 28:PIN 19  = LS273_SET               ; /*                                 */ 
+ 29:
+ 30:SCC_WE = LS273_BIT4 # WE;
+ 31:SRAM_WE = !LS273_BIT4 # (UPPER_EN& A10 & A9& A7) # WE;
+ 32:MA19 = (DEFBANK & LS273_BIT6) # (!DEFBANK & ! LS273_BIT6);
+ 33:SCC_SLTSEL = !CASSETTE_EN # SLTSEL;
+ 34:LS273_SET = !(SLTSEL # WE)&UPPER_EN& A10 & A9& A7;
+ 35:
+ 36:
+ 37:
+ 38:
+ 39:
+ 40:
+ 41:
+
+
+
+Jedec Fuse Checksum       (2f79)
+Jedec Transmit Checksum   (b785)

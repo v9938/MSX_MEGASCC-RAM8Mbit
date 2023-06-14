@@ -1,0 +1,25 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8s  Library DLIB-h-40-9
+# Created         Thu Dec 15 02:36:35 2022
+# Name            ADDRMAN 
+# Partno          00 
+# Revision        01 
+# Date            2022/11/22 
+# Designer        v9938 
+# Company         ILFC 
+# Assembly        None 
+# Location        None 
+#
+# Inputs  A1 A2 A3 A4 
+#         A5 A6 A8 A11 
+#         A12 A13 A14 A15 
+#         ADDRESS_EN ADDRESS_SEL 
+# Outputs ADDRESS_EN 
+.i 14
+.o 1
+.p 2
+111111111111-0 1
+111111111110-1 1
+.end

@@ -1,0 +1,16 @@
+Name     ADDRMAN;
+PartNo   00;
+Date     2022/11/22;
+Revision 01;
+Designer v9938;
+Company  ILFC;
+Assembly None;
+Location None;
+Device   G16V8;
+
+
+ORDER: A1, A2, A3, A4, A5, A6, A8, A11, A12, A13, A14, A15, ADDRESS_SEL, ADDRESS_EN; 
+
+
+VECTORS:
+1111111111011L

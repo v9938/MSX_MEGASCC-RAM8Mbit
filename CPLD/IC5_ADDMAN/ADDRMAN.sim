@@ -1,0 +1,26 @@
+%SIGNAL
+PIN   2 =  A1 
+PIN   4 =  A2 
+PIN   5 =  A3 
+PIN   9 =  A4 
+PIN  13 =  A5 
+PIN  11 =  A6 
+PIN   7 =  A8 
+PIN   1 =  A11 
+PIN   3 =  A12 
+PIN   6 =  A13 
+PIN   8 =  A14 
+PIN  12 =  A15 
+PIN  19 =  ADDRESS_EN 
+PIN  14 =  ADDRESS_SEL 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+ADDRESS_EN =>
+    A1 & A2 & A3 & A4 & A5 & A6 & A8 & A11 & A12 & A13 & A14 & A15 & !ADDRESS_SEL
+  # A1 & A2 & A3 & A4 & A5 & A6 & A8 & A11 & A12 & A13 & A14 & !A15 & ADDRESS_SEL
+
+%END

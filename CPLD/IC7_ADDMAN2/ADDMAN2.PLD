@@ -1,0 +1,39 @@
+Name     ADDMAN2 ;
+PartNo   00 ;
+Date     2022/11/22 ;
+Revision 01 ;
+Designer v9938 ;
+Company  None ;
+Assembly None ;
+Location  ;
+Device   G16V8 ;
+
+/* *************** INPUT PINS *********************/
+PIN 1   = CASSETTE_EN                      ; /*                                 */ 
+PIN 2   = UPPER_EN ; /*                                 */ 
+PIN 3   = LS273_BIT4               ; /*                                 */ 
+PIN 4   = LS273_BIT6              ; /*                                 */ 
+PIN 5   = A7                      ; /*                                 */ 
+PIN 6   = A10                      ; /*                                 */ 
+PIN 7   = A9                      ; /*                                 */ 
+PIN 8   = WE             ; /*	*/
+PIN 9   = SLTSEL ; /*                                                   */ 
+PIN 11  = DEFBANK                  ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN 13  = MA19	             ; /*                                 */ 
+PIN 14  = SRAM_WE                ; /*                                 */ 
+PIN 16  = SCC_SLTSEL              ; /*                                 */ 
+PIN 17  = SCC_WE                  ; /*                                 */ 
+PIN 19  = LS273_SET               ; /*                                 */ 
+
+SCC_WE = LS273_BIT4 # WE;
+SRAM_WE = !LS273_BIT4 # (UPPER_EN& A10 & A9& A7) # WE;
+MA19 = (DEFBANK & LS273_BIT6) # (!DEFBANK & ! LS273_BIT6);
+SCC_SLTSEL = !CASSETTE_EN # SLTSEL;
+LS273_SET = !(SLTSEL # WE)&UPPER_EN& A10 & A9& A7;
+
+
+
+
+

@@ -1,0 +1,43 @@
+%SIGNAL
+PIN   5 =  A7 
+PIN   7 =  A9 
+PIN   6 =  A10 
+PIN   1 =  CASSETTE_EN 
+PIN  11 =  DEFBANK 
+PIN   3 =  LS273_BIT4 
+PIN   4 =  LS273_BIT6 
+PIN  19 =  LS273_SET 
+PIN  13 =  MA19 
+PIN  16 =  SCC_SLTSEL 
+PIN  17 =  SCC_WE 
+PIN   9 =  SLTSEL 
+PIN  14 =  SRAM_WE 
+PIN   2 =  UPPER_EN 
+PIN   8 =  WE 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+LS273_SET =>
+    A7 & A9 & A10 & !SLTSEL & UPPER_EN & !WE
+
+MA19 =>
+    DEFBANK & LS273_BIT6
+  # !DEFBANK & !LS273_BIT6
+
+SCC_SLTSEL =>
+    !CASSETTE_EN
+  # SLTSEL
+
+SCC_WE =>
+    LS273_BIT4
+  # WE
+
+SRAM_WE =>
+    !LS273_BIT4
+  # A7 & A9 & A10 & UPPER_EN
+  # WE
+
+%END

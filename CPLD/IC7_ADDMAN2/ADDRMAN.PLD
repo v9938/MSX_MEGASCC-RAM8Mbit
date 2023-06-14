@@ -1,0 +1,34 @@
+Name     ADDRMAN ;
+PartNo   00 ;
+Date     2022/11/22 ;
+Revision 01 ;
+Designer v9938 ;
+Company  ILFC ;
+Assembly None ;
+Location None ;
+Device   G16V8 ;
+
+/* *************** INPUT PINS *********************/
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+PIN     =                         ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN     =                         ; /*                                 */ 
+
+
+
+

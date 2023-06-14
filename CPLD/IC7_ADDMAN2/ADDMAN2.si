@@ -1,0 +1,16 @@
+Name     ADDMAN2;
+PartNo   00;
+Date     2022/11/22;
+Revision 01;
+Designer v9938;
+Company  None;
+Assembly None;
+Location ;
+Device   G16V8;
+
+
+ORDER: A7, A9, A10, CASSETTE_EN, DEFBANK, LS273_BIT4, LS273_BIT6, LS273_SET, MA19, SCC_SLTSEL, SCC_WE, SLTSEL, SRAM_WE, UPPER_EN, WE; 
+
+
+VECTORS:
+1111110H***0*00

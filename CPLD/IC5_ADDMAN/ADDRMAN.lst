@@ -1,0 +1,43 @@
+LISTING FOR LOGIC DESCRIPTION FILE: ADDRMAN.pld                      Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Thu Dec 15 02:36:35 2022
+
+  1:Name     ADDRMAN ;
+  2:PartNo   00 ;
+  3:Date     2022/11/22 ;
+  4:Revision 01 ;
+  5:Designer v9938 ;
+  6:Company  ILFC ;
+  7:Assembly None ;
+  8:Location None ;
+  9:Device   G16V8 ;
+ 10:
+ 11:/* *************** INPUT PINS *********************/
+ 12:PIN 1             = A11                                 ;
+ 13:PIN 2             = A1                                  ;
+ 14:PIN 3             = A12                                 ;
+ 15:PIN 4             = A2                                  ;
+ 16:PIN 5             = A3                                  ;
+ 17:PIN 6             = A13                                 ;
+ 18:PIN 7             = A8                                  ;
+ 19:PIN 8             = A14                                 ;
+ 20:PIN 9             = A4                                  ;
+ 21:PIN 11        = A6                  ;
+ 22:PIN 12        = A15                ; /* SLOT ADDRESS A10-15             */ 
+ 23:PIN 13        = A5                ; /* SLOT ADDRESS A10-15             */ 
+ 24:PIN 14  = ADDRESS_SEL             ; /* ADDRESS_SELECT H=7FFE L=BFFE    */ 
+ 25:/* *************** OUTPUT PINS *********************/
+ 26:PIN 19  = ADDRESS_EN              ; /* ADDRESS ENABLE IN Range=H       */ 
+ 27:
+ 28:ADDRESS_EN = ((ADDRESS_SEL & !A15) # (!ADDRESS_SEL & A15))&((!ADDRESS_SEL & A14) # (ADDRESS_SEL & A14)) & A13 & A12 & A11 & A1 & A2 & A8 & A3 & A6 & A5 & A4;
+ 29:
+ 30:
+ 31:
+
+
+
+Jedec Fuse Checksum       (0f64)
+Jedec Transmit Checksum   (7a68)

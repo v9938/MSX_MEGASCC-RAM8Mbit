@@ -1,0 +1,34 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8s  Library DLIB-h-40-9
+# Created         Thu Mar 16 17:17:04 2023
+# Name            ADDMAN2 
+# Partno          00 
+# Revision        01 
+# Date            2022/11/22 
+# Designer        v9938 
+# Company         None 
+# Assembly        None 
+# Location        
+#
+# Inputs  A7 A9 A10 CASSETTE_EN 
+#         DEFBANK LS273_BIT4 LS273_BIT6 LS273_SET 
+#         MA19 SCC_SLTSEL SCC_WE SLTSEL 
+#         SRAM_WE UPPER_EN WE 
+# Outputs LS273_SET MA19 SCC_SLTSEL SCC_WE 
+#         SRAM_WE 
+.i 15
+.o 5
+.p 10
+111--------0-10 1~~~~
+----1-1-------- ~1~~~
+----0-0-------- ~1~~~
+---0----------- ~~1~~
+-----------1--- ~~1~~
+-----1--------- ~~~1~
+--------------1 ~~~1~
+-----0--------- ~~~~1
+111----------1- ~~~~1
+--------------1 ~~~~1
+.end

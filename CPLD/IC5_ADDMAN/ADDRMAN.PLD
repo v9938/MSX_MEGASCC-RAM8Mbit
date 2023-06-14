@@ -1,0 +1,29 @@
+Name     ADDRMAN ;
+PartNo   00 ;
+Date     2022/11/22 ;
+Revision 01 ;
+Designer v9938 ;
+Company  ILFC ;
+Assembly None ;
+Location None ;
+Device   G16V8 ;
+
+/* *************** INPUT PINS *********************/
+PIN 1		  = A11					;
+PIN 2		  = A1					;
+PIN 3		  = A12					;
+PIN 4		  = A2					;
+PIN 5		  = A3					;
+PIN 6		  = A13					;
+PIN 7		  = A8					;
+PIN 8		  = A14					;
+PIN 9		  = A4					;
+PIN 11        = A6                  ;
+PIN 12        = A15                ; /* SLOT ADDRESS A10-15             */ 
+PIN 13        = A5                ; /* SLOT ADDRESS A10-15             */ 
+PIN 14  = ADDRESS_SEL             ; /* ADDRESS_SELECT H=7FFE L=BFFE    */ 
+/* *************** OUTPUT PINS *********************/
+PIN 19  = ADDRESS_EN              ; /* ADDRESS ENABLE IN Range=H       */ 
+
+ADDRESS_EN = ((ADDRESS_SEL & !A15) # (!ADDRESS_SEL & A15))&((!ADDRESS_SEL & A14) # (ADDRESS_SEL & A14)) & A13 & A12 & A11 & A1 & A2 & A8 & A3 & A6 & A5 & A4;
+
