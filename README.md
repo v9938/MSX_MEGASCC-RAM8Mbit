@@ -97,11 +97,27 @@ SRAM書き換え時など、ROMから起動させたくない場合に利用し�
 ## ■ その他対応ソフトについて
 niga氏作成のMGLOADにて、拡張領域を含み、認識および書き込み可能なことを確認しています。  
 
-追記：
-SCC RAM DISKの作成ができる辻川氏のMGINST.COMについて、現状512Kbyteを超える書き込みをすると正常に動作できません。  
-似非SCC RAMと非互換部分の問題でフリーズします。現在パッチを作成していますので少々お待ちください。  
-(似非SCC RAMより16K Byte使える容量が減ります)  
+### ●MGINST.COMについて
+SCC RAM DISKの作成ができる辻川氏のMGINST.COMについては、似非SCC RAMと非互換部分の問題でフリーズします。  
+同梱しているPatchを実行して修正してください。(似非SCC RAMより8K Byte使える容量が減ります)  
 
+
+[MGINST.COM Ver2.15用Patchソフト](./MGINST_PATCH/mgpatch.com)  
+
+実行手順：
+1．MGINST.COMを実行して、RAMDISKを作成します。
+```
+>mginst DISKBIOS.ROM /Sxx /D
+```
+<img src="./img/img012.png">  
+
+2. 指示に従い再起動しDOSを起動させます。起動できない場合は切り離しスイッチを使ってDISKからDOSを起動させてください。  
+
+3. MGPATCH.COMを実行し、Patchを当てます。実行後は再起動してください。
+```
+>mgpatch
+```
+<img src="./img/img013.png"> <img src="./img/img014.png">  
 
 ## ■SRAMのバックアップについて
 電圧監視ICにて、本機の供給電圧が4V以下(<140ms)になった時にバックアップモードに移行します。  
