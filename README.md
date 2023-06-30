@@ -98,11 +98,12 @@ SRAM書き換え時など、ROMから起動させたくない場合に利用し�
 niga氏作成のMGLOADにて、拡張領域を含み、認識および書き込み可能なことを確認しています。  
 
 ### ●MGINST.COMについて
-SCC RAM DISKの作成ができる辻川氏のMGINST.COMについては、似非SCC RAMと非互換部分の問題でフリーズします。  
+SCC RAM DISKの作成ができる辻川氏のMGINST.COMについては、  
+似非SCC RAMと非互換部分の問題でフリーズします。  
 同梱しているPatchを実行して修正してください。(似非SCC RAMより8K Byte使える容量が減ります)  
 
 
-[MGINST.COM Ver2.15用Patchソフト](./MGINST_PATCH/mgpatch.com) [zip形式](./MGINST_PATCH/mgpatch.zip)  
+[MGINST.COM Ver2.15用Patchソフト](./MGINST_PATCH/mgpatch.com) [[zip形式]](./MGINST_PATCH/mgpatch.zip)  
 
 実行手順：
 1．MGINST.COMを実行して、RAMDISKを作成します。
@@ -111,7 +112,8 @@ SCC RAM DISKの作成ができる辻川氏のMGINST.COMについては、似非S
 ```
 <img src="./img/img012.png">  
 
-2. 指示に従い再起動しDOSを起動させます。起動できない場合は切り離しスイッチを使ってDISKからDOSを起動させてください。  
+2. 指示に従い再起動しDOSを起動させます。  
+　 起動できない場合は切り離しスイッチを使ってDISKからDOSを起動させてください。  
 
 3. MGPATCH.COMを実行し、Patchを当てます。実行後は再起動してください。
 ```
