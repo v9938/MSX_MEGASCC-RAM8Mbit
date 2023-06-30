@@ -102,7 +102,7 @@ SCC RAM DISKの作成ができる辻川氏のMGINST.COMについては、似非S
 同梱しているPatchを実行して修正してください。(似非SCC RAMより8K Byte使える容量が減ります)  
 
 
-[MGINST.COM Ver2.15用Patchソフト](./MGINST_PATCH/mgpatch.com)  
+[MGINST.COM Ver2.15用Patchソフト](./MGINST_PATCH/mgpatch.com) [zip形式](./MGINST_PATCH/mgpatch.zip)  
 
 実行手順：
 1．MGINST.COMを実行して、RAMDISKを作成します。
